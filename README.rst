@@ -2,7 +2,7 @@ Deke 🏒
 =======
 
 A convenient HockeyApp API package making it easier than ever to manage
-apps, gather specific app statistics, and download builds. Use with in
+apps, gather specific app statistics, and download builds. Use within
 your automated tests, dashboards, or whatever the heck you desire!
 
 Installation
@@ -36,8 +36,8 @@ associated with your applications.
     ...
 
 For a detailed listing of all the endpoints and parameters available to
-you, and to information on gather your application token, visit
-https://support.hockeyapp.net/kb/api/api-apps.
+you, and to gather your application token, visit
+https://support.hockeyapp.net/kb/api.
 
 Improvements
 ------------
