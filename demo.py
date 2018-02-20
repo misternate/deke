@@ -9,7 +9,7 @@ is a token for apps and a token and identifier for app-specific
 features.
 '''
 
-apps = deke.Apps('app_token')
+apps = deke.Apps(app_token)
 available_apps = apps.list_apps()
 
 app = deke.App(app_token, app_identifier)
