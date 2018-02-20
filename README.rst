@@ -26,7 +26,9 @@ associated with your applications.
 
 .. code-block:: python
 
-    apps = deke.Apps('app_token')
+    import deke
+
+    apps = deke.Apps(app_token)
     available_apps = apps.list_apps()
 
     app = deke.App(app_token, app_identifier)
