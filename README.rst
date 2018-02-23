@@ -14,9 +14,6 @@ Installation
     2. cd deke
     3. pip install -r requirements.txt
 
-Visit https://support.hockeyapp.net/kb/api/api-apps to gather your app
-credentials.
-
 Usage
 -----
 
@@ -28,8 +25,13 @@ associated with your applications.
 
     import deke
 
+    app_token = ''
+    app_identifier = ''
+
     apps = deke.Apps(app_token)
     available_apps = apps.list_apps()
+    new_test_app = apps.new('My Test App', 'com.misternate.testApp', 'Android')
+    apps.delete(app_id)
 
     app = deke.App(app_token, app_identifier)
     versions = app.list_versions()
@@ -77,4 +79,4 @@ Miscellaneous
 Author
 ------
 
-Nate Edwards ([@misternate](https://twitter.com/misternate))
+Nate Edwards (`@misternate <https://twitter.com/misternate>`_)
