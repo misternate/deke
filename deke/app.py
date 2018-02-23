@@ -11,6 +11,18 @@ class Apps():
         response = apps._get(request_fragments)
         
         return response
+    
+    def new(self, title, bundle_identifier, platform="iOS"):
+        request_fragments = ['apps', 'new']
+        app = api.Request(self.token)
+        response = app._post(request_fragments, {'title': title, 'bundle_identifier': bundle_identifier, 'platform': platform})
+        
+        return response
+
+    def delete(self, app_id):
+        request_fragments = ['apps', app_id]
+        app = api.Request(self.token)
+        response = app._delete(request_fragments)
 
 
 class App():

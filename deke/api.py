@@ -1,5 +1,7 @@
 from deke.utils import constants
 
+import logging
+
 from tqdm import tqdm
 import requests
 
@@ -31,7 +33,37 @@ class Request():
             )
             return response.json()
         except requests.exceptions.RequestException:
-            print('HTTP Request failed.')
+            logging.error('The HTTP Request has failed.')
+    
+    def _post(self, uri_fragments, params=None):
+        path = self._constructor_uri(uri_fragments)
+
+        self.params = params
+
+        try:
+            response = requests.post(
+                url=path,
+                params=params,
+                headers=self.header
+            )
+            return response.json()
+        except requests.exceptions.RequestException:
+            logging.error('The HTTP Request has failed.')
+
+    def _delete(self, uri_fragments, params=None):
+        path = self._constructor_uri(uri_fragments)
+        print('PAth: ' + path)
+
+        self.params = params
+
+        try:
+            response = requests.delete(
+                url=path,
+                params=params,
+                headers=self.header
+            )
+        except requests.exceptions.RequestException:
+            logging.error('The HTTP Request has failed.')
 
     def _download_build(self, uri_fragments):
         params = {"include_build_urls": "true"}
