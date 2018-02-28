@@ -11,6 +11,7 @@ features.
 
 apps = deke.Apps(app_token)
 available_apps = apps.list_apps()
+new_app = apps.new('My Test App', 'com.misternate.testApp', 'Android')
 
 app = deke.App(app_token, app_identifier)
 versions = app.list_versions()
