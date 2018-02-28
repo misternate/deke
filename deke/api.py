@@ -34,7 +34,7 @@ class Request():
             return response.json()
         except requests.exceptions.RequestException:
             logging.error('The HTTP Request has failed.')
-    
+
     def _post(self, uri_fragments, params=None):
         path = self._constructor_uri(uri_fragments)
 

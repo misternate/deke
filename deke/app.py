@@ -9,14 +9,21 @@ class Apps():
         request_fragments = ['apps']
         apps = api.Request(self.token)
         response = apps._get(request_fragments)
-        
+
         return response
-    
+
     def new(self, title, bundle_identifier, platform="iOS"):
         request_fragments = ['apps', 'new']
         app = api.Request(self.token)
-        response = app._post(request_fragments, {'title': title, 'bundle_identifier': bundle_identifier, 'platform': platform})
-        
+        response = app._post(
+            request_fragments,
+            {
+                'title': title, 
+                'bundle_identifier': bundle_identifier,
+                'platform': platform
+            }
+        )
+
         return response
 
     def delete(self, app_id):
@@ -68,5 +75,5 @@ class App():
         request_fragments = ['apps', self.identifier, 'statistics']
         app = api.Request(self.token, self.identifier)
         response = app._get(request_fragments)
-        
+
         return response
