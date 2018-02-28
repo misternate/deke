@@ -10,6 +10,12 @@ Installation
 
 .. code-block:: bash
 
+    pip install deke
+
+or
+
+.. code-block:: bash
+
     1. git clone https://github.com/misternate/deke.git
     2. cd deke
     3. pip install -r requirements.txt
@@ -19,7 +25,7 @@ Usage
 
 The project includes a ``demo.py`` file to get started. Open ``demo.py``
 and update ``app_token`` and ``app_identifier`` with the values
-associated with your applications.
+corresponding with your applications.
 
 .. code-block:: python
 
@@ -69,7 +75,7 @@ Distribution
 -  Invite and remove distribution groups and users from apps
 
 Miscellaneous
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 -  CLI
 -  Persist user/app configs for quicker access to what you need
