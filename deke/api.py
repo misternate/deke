@@ -22,7 +22,6 @@ class Request():
 
     def _get(self, uri_fragments, params=None):
         path = self._constructor_uri(uri_fragments)
-
         self.params = params
 
         try:
@@ -37,7 +36,6 @@ class Request():
 
     def _post(self, uri_fragments, params=None):
         path = self._constructor_uri(uri_fragments)
-
         self.params = params
 
         try:
@@ -52,8 +50,6 @@ class Request():
 
     def _delete(self, uri_fragments, params=None):
         path = self._constructor_uri(uri_fragments)
-        print('PAth: ' + path)
-
         self.params = params
 
         try:

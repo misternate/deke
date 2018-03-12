@@ -55,9 +55,10 @@ Improvements
 Apps
 ~~~~
 
--  Create new apps (.ipa, .apk, .zip)
+-  Create new apps *Completed: 03/11/18*
+-  Upload app bundle (.ipa, .apk. .zip)
 -  Update app data and settings
--  Delete apps and select versions
+-  Delete apps and select versions:  *Completed: 03/11/18*
 
 Crashes
 ~~~~~~~
