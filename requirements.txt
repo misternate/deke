@@ -3,6 +3,6 @@ chardet==3.0.4
 Click==7.0
 idna==2.8
 pur==5.2.1
-requests==2.22.0
+requests==2.31.0
 tqdm==4.28.1
 urllib3==1.26.5
